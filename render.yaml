@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: khidmeni
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: JWT_SECRET
+        generateValue: true
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: DEV2_PASSWORD
+        sync: false
+      - key: DEV3_PASSWORD
+        sync: false
